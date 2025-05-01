@@ -60,7 +60,7 @@ def main():
     print(stdout.read().decode())
     print("--- STDERR ---")
     print(stderr.read().decode())
-
+    time.sleep(20)
     # --- Запрос папки для сохранения merged.csv ---
     # Явно создаём и настраиваем окно
     save_root = Tk()
