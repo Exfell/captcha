@@ -17,6 +17,8 @@ def main():
     root = Tk()
     root.withdraw()
     root.lift()
+    root.update_idletasks()
+    root.geometry('+500+300')  # X=500, Y=300 — примерно центр экрана
     root.attributes('-topmost', True)
     root.after(100, lambda: root.attributes('-topmost', False))  # вернуть обычное поведение
     file_path = filedialog.askopenfilename(filetypes=[("CSV files", "*.csv")])
@@ -67,6 +69,8 @@ def main():
     save_root = Tk()
     save_root.withdraw()
     save_root.lift()
+    save_root.update_idletasks()
+    save_root.geometry('+500+300')  # X=500, Y=300 — примерно центр экрана
     save_root.attributes('-topmost', True)
     save_root.after(100, lambda: save_root.attributes('-topmost', False))  # вернуть обычное поведение
     local_save_dir = filedialog.askdirectory(parent=save_root, title="Выберите папку для сохранения результата")
