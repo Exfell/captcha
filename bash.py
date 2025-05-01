@@ -35,6 +35,7 @@ def main():
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(SERVER_IP, username=USERNAME, password=PASSWORD)
+    ssh.get_transport().set_keepalive(30)
 
     # Передача файла
     with SCPClient(ssh.get_transport()) as scp:
