@@ -48,9 +48,8 @@ def main():
     # --- Команды на сервере ---
     commands = f"""
     cd {REMOTE_DIR}
-    ./venv/bin/python3 start.py {file_name}
+    exec ./venv/bin/python3 start.py {file_name}
     """
-
 
     stdin, stdout, stderr = ssh.exec_command(commands)
 
