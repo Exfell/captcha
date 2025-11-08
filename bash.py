@@ -5,7 +5,7 @@ from tkinter import filedialog, Tk
 
 import time
 
-
+# вроде бы, тут просто доп. оболочка, чтобы можно было запустить программу start.py.
 def main():
     # --- Настройки подключения ---
     SERVER_IP = '80.90.178.157'
@@ -82,7 +82,7 @@ def main():
         remote_result_file = os.path.join(REMOTE_DIR, 'merged.csv')
         local_result_path = os.path.join(local_save_dir, 'merged.csv')
 
-        with SCPClient(ssh.get_transport()) as scp:
+        with SCPClient(ssh.get_transport(), socket_timeout=3000) as scp:
             print("Скачиваем merged.csv...")
             scp.get(remote_result_file, local_result_path)
 
