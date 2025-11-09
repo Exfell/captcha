@@ -3,14 +3,15 @@ import paramiko
 from scp import SCPClient
 from tkinter import filedialog, Tk
 
+
 import time
 
 # вроде бы, тут просто доп. оболочка, чтобы можно было запустить программу start.py.
 def main():
     # --- Настройки подключения ---
-    SERVER_IP = '80.90.178.157'
+    SERVER_IP = '5.129.226.151'
     USERNAME = 'root'
-    PASSWORD = 'cD#xE?aZ5+dGje'  # Или используй ключ, если хочешь
+    PASSWORD = 'd7@JdN2h?fekV2'  # Или используй ключ, если хочешь
     REMOTE_DIR = '/www/parserrr/'
 
     # --- Выбор файла ---
